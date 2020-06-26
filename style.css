@@ -1,0 +1,126 @@
+:root {
+    /* Primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+    --Very_Dark_Blue: hsl(234, 12%, 34%);
+    --Grayish_Blue: hsl(229, 6%, 66%);
+    --Very_Light_Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: var(--Very_Light_Gray);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px 20px;
+
+}
+
+header h2:first-child {
+    font-weight: 200;
+    padding-bottom: 12px;
+}
+
+header h2:nth-child(2) {
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+p {
+    color: var(--Grayish_Blue);
+}
+
+.box_container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1350px;
+}
+
+.box {
+    -webkit-box-shadow: 5px 5px 9px 3px #cac9c9;
+    box-shadow: 5px 5px 9px 3px #B4B4B4;
+    border: 1px solid #eeeeee;
+    padding: 30px 20px;
+    margin: 20px;
+    border-radius: 10px;
+    max-width: 350px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.box h2 {
+    padding-bottom: 10px;
+}
+.box p {
+    padding-bottom: 20px;
+
+}
+
+.box img {
+    display: block;
+    margin-left: auto;
+}
+
+.supervisor::after {
+    background-color: var(--Blue);
+}
+.team_builder::after {
+    background-color: var(--Cyan);
+}
+.karma:after {
+    background-color: var(--Orange);
+}
+.calculator::after{
+    background-color: var(--Red);
+}
+
+.upwards {
+    transform:translateY(50%) ;
+}
+footer {
+    margin: 140px 10px 10px 10px;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .upwards{
+        transform: translateY(0);
+    }
+    .box {
+        width: 80%;
+    }
+}
+@media (max-width: 450px) {
+    .box {
+        padding: 20px 10px ;
+        max-width: 300px;
+    }
+}
